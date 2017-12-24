@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginTop="@dimen/activity_vertical_margin"
+    android:layout_marginStart="@dimen/activity_horizontal_margin"
+    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+    android:layout_marginBottom="@dimen/activity_vertical_margin"
+    tools:context="mzaart.com.todo.activities.AddTaskActivity">
+
+    <EditText
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:hint="Title" />
+
+    <EditText
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:inputType="text"
+        android:hint="Description" />
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Set Expiry Date"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            android:textColor="#757575"
+            android:layout_alignParentStart="true"/>
+
+        <Switch
+            android:id="@+id/expiry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/time_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible">
+
+        <TextView
+            android:id="@+id/timeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            android:textColor="#757575"
+            android:text="Expires On" />
+
+        <ImageView
+            android:id="@+id/timeButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignBottom="@id/timeText"
+            android:background="@drawable/ic_chevron_right"/>
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_alignBottom="@id/timeButton"
+            android:layout_alignEnd="@id/timeButton"
+            android:layout_marginEnd="32dp"
+            android:gravity="center_vertical"
+            android:text="Never"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/notify_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible">
+
+        <TextView
+            android:id="@+id/notifyText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            android:textColor="#757575"
+            android:text="Notify" />
+
+        <ImageView
+            android:id="@+id/notifyButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignBottom="@id/notifyText"
+            android:background="@drawable/ic_chevron_right"/>
+
+        <TextView
+            android:id="@+id/notify"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_alignBottom="@id/notifyButton"
+            android:layout_alignEnd="@id/notifyButton"
+            android:layout_marginEnd="32dp"
+            android:gravity="center_vertical"
+            android:text="Never"/>
+    </RelativeLayout>
+</LinearLayout>
